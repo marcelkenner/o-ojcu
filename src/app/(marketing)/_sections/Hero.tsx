@@ -13,7 +13,14 @@ interface Props {
 
 export default function Hero({ copy }: Props) {
   return (
-    <SectionShell id={anchors.hero} eyebrow={copy.eyebrow} title={copy.title} tone="dark" headingLevel="h1">
+    <SectionShell
+      id={anchors.hero}
+      eyebrow={copy.eyebrow}
+      title={copy.title}
+      tone="dark"
+      headingLevel="h1"
+      className="hero-section"
+    >
       <Container className="hero" size="lg">
         <div className="hero__content">
           <Badge>Premiera 20XX</Badge>
@@ -30,10 +37,10 @@ export default function Hero({ copy }: Props) {
         </div>
         <div className="hero__image-frame">
           <Image
-            src="/images/cover.jpg"
-            alt="Okładka książki O ojcu, który nigdy nim nie był"
-            width={360}
-            height={520}
+            src="/images/hero_image.png"
+            alt="Okładka książki i wersja cyfrowa O ojcu, który nigdy nim nie był"
+            width={730}
+            height={665}
             priority
             className="book-figure"
           />

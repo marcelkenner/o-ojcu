@@ -11,6 +11,7 @@ interface Props {
   intro?: string;
   tone?: SectionTone;
   headingLevel?: HeadingLevel;
+  className?: string;
   children: ReactNode;
 }
 
@@ -27,11 +28,12 @@ export function SectionShell({
   intro,
   tone = "default",
   headingLevel = "h2",
+  className,
   children,
 }: Props) {
   const HeadingTag = headingLevel;
   return (
-    <section id={id} className={toneClass[tone]}>
+    <section id={id} className={`${toneClass[tone]} ${className ?? ""}`.trim()}>
       {(eyebrow || title || intro) && (
         <Container size="lg" className="section__header">
           {eyebrow && <p className="eyebrow">{eyebrow}</p>}
