@@ -7,7 +7,7 @@ export const copy: Copy = {
     subtitle: "Intymna opowieść o polskim ojcostwie i jego braku",
     description:
       "Historia dorastania w cieniu nieobecności, wstydu i prób nazwania tego, co pozostało po milczeniu.",
-    primaryCta: "Pobierz darmowy fragment",
+    primaryCta: "Czytaj fragment",
     secondaryCta: "Zobacz, gdzie kupić",
   },
   forWho: {
@@ -45,12 +45,11 @@ export const copy: Copy = {
     ],
   },
   excerpt: {
-    title: "Fragment do pobrania",
-    intro:
-      "Prolog oraz scena nocy z policją w jednym PDF-ie. Bez zapisywania się na newsletter – wystarczy kliknąć.",
-    primaryCta: "Pobierz PDF",
-    secondaryCta: "Przejdź do sekcji",
-    note: "Plik otworzy się w nowej karcie. Możesz go też znaleźć niżej w sekcji Fragment.",
+    title: "Przeczytaj pierwszy fragment online",
+    intro: "Pierwszy rozdział dostępny od razu na stronie — bez pobierania i bez zapisu.",
+    primaryCta: "Czytaj fragment",
+    secondaryCta: "",
+    note: "",
   },
   contents: {
     title: "Co znajdziesz w środku",

@@ -7,6 +7,7 @@ type Common = {
   variant?: Variant;
   size?: Size;
   fullWidth?: boolean;
+  className?: string;
   children: ReactNode;
 };
 
@@ -14,8 +15,8 @@ type ButtonProps = Common & ButtonHTMLAttributes<HTMLButtonElement> & { as?: "bu
 type AnchorProps = Common & AnchorHTMLAttributes<HTMLAnchorElement> & { as: "a"; href: string };
 
 export function Button(props: ButtonProps | AnchorProps) {
-  const { variant = "primary", size = "md", fullWidth = false, children, ...rest } = props;
-  const className = `btn btn--${variant} btn--${size} ${fullWidth ? "btn--full" : ""}`.trim();
+  const { variant = "primary", size = "md", fullWidth = false, className: extraClass, children, ...rest } = props;
+  const className = `btn btn--${variant} btn--${size} ${fullWidth ? "btn--full" : ""} ${extraClass ?? ""}`.trim();
 
   if ("as" in props && props.as === "a") {
     const { href, ...anchorRest } = rest as AnchorProps;

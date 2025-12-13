@@ -5,6 +5,8 @@ import { baseMetadata } from "@/lib/metadata";
 import { buildBookJsonLd } from "@/lib/schema";
 import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
+import ScrollProgressBar from "@/components/ui/ScrollProgressBar";
+import MobileCtaBar from "@/components/ui/MobileCtaBar";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -28,8 +30,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
           />
+          <ScrollProgressBar />
           <SiteHeader />
           <main>{children}</main>
+          <MobileCtaBar />
           <SiteFooter />
         </div>
       </body>

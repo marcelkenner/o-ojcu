@@ -472,7 +472,7 @@ Below is the “library” you implement in `src/components/ui/`.
 
 ## U11. ExcerptBox
 
-* Serif quote style, “Czytaj dalej w PDF” link
+* Serif quote style, “Czytaj dalej online” link
 
 ## U12. Header / Footer
 
@@ -503,7 +503,7 @@ Below is the “library” you implement in `src/components/ui/`.
 Hero best practice: keep a **single clear CTA** or at most a **primary + non-competing secondary**. ([prismic.io][16])
 So:
 
-* Primary: “Pobierz darmowy fragment (PDF)”
+* Primary: “Czytaj fragment online”
 * Secondary: “Zobacz, gdzie kupić”
 
 ---

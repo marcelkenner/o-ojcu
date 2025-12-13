@@ -1,14 +1,15 @@
 "use client";
 
-import { Compass, LinkSimple, ShieldStar, ChatsCircle, IconProps } from "@phosphor-icons/react";
+import { Compass, LinkSimple, ShieldStar, ChatsCircle, ShoppingCart, ShoppingCartSimple, IconProps } from "@phosphor-icons/react";
 
-type IconName = "compass" | "link" | "shield" | "chats";
+type IconName = "compass" | "link" | "shield" | "chats" | "cart";
 
 const map: Record<IconName, React.ComponentType<IconProps>> = {
   compass: Compass,
   link: LinkSimple,
   shield: ShieldStar,
   chats: ChatsCircle,
+  cart: ShoppingCartSimple ?? ShoppingCart,
 };
 
 interface Props extends IconProps {
@@ -18,6 +19,10 @@ interface Props extends IconProps {
 
 export function Icon({ name, className, ...rest }: Props) {
   const Component = map[name];
+  if (!Component) {
+    console.warn(`Icon "${name}" not found in map`);
+    return null;
+  }
   return <Component className={className} {...rest} />;
 }
 

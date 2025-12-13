@@ -18,8 +18,8 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="site-header__cta">
-          <Button as="a" href="/downloads/darmowy-fragment.pdf" size="sm">
-            Pobierz fragment
+          <Button as="a" href="/fragment" size="sm">
+            Czytaj fragment
           </Button>
         </div>
       </Container>

@@ -59,7 +59,7 @@ SEO / INDEXING:
   - robots.txt lives in app root (Next metadata convention) :contentReference[oaicite:13]{index=13}
 
 ASSETS:
-  - /public images & PDFs served from public folder (Next) :contentReference[oaicite:14]{index=14}
+  - /public images served from public folder (Next) :contentReference[oaicite:14]{index=14}
 
 
 ====================================================================================================
@@ -114,7 +114,7 @@ DESKTOP VIEW (>= 1024px)  |  PAGE: "/" (ONE-PAGE MARKETING + ANCHORS)
 |    (margin-bottom: 40px)                                                                    |
 |                                                                                             |
 |  CTA ROW (gap 16px)                                                                         |
-|    [PRIMARY BUTTON] "Pobierz darmowy fragment (PDF)"                                        |
+|    [PRIMARY BUTTON] "Czytaj fragment online"                                                |
 |      - min-height 48px, padding 14x22, radius 999px                                         |
 |      - bg gradient #ff7e67->#ff9a8b, text #fff, shadow glow                                 |
 |      - icon: download                                                                       |
@@ -236,17 +236,17 @@ DESKTOP VIEW (>= 1024px)  |  PAGE: "/" (ONE-PAGE MARKETING + ANCHORS)
 | |  "Jest noc, kraj, którego nazwy nie podam...                                             | |
 | |   (...) Wybieram numer.                                                                  | |
 | |   Policja po drugiej stronie odbiera szybciej, niż kiedykolwiek odbierał mój ojciec..."  | |
-| |  [Show: 2–4 short paragraphs; add “Czytaj dalej w PDF”]                                  | |
+| |  [Show: 2–4 short paragraphs; add “Czytaj dalej online”]                                 | |
 | +-----------------------------------------------------------------------------------------+ |
 |                                                                                             |
 | CTA ROW (gap 16px, margin-top 24px)                                                         |
-|  [PRIMARY] "Pobierz darmowy fragment (PDF)"  (downloads/prolog+scena.pdf)                   |
+|  [PRIMARY] "Czytaj fragment online"                                                         |
 |  [SECONDARY] "Zobacz, gdzie kupić" (scroll to #kup)                                         |
-| MICROCOPY (12/18): "Bez spamu. Możesz pobrać PDF bez zapisu lub dostać go mailem."          |
+| MICROCOPY (12/18): "Bez spamu. Możesz przeczytać online bez zapisu."                       |
 |                                                                                             |
 | OPTIONAL: Email capture inline (if you want “send me fragment”)                             |
 |  +------------------------------------+  +-------------------------+                        |
-|  | Input: "Twój e-mail" (48px height) |  | Button: "Wyślij mi PDF" |                        |
+|  | Input: "Twój e-mail" (48px height) |  | Button: "Wyślij mi fragment" |                   |
 |  | placeholder: "jan@..."             |  | min 48px, gradient       |                        |
 |  +------------------------------------+  +-------------------------+                        |
 |  Checkbox (14px text): "Zgadzam się na..." + link to /polityka-prywatnosci                  |
@@ -376,7 +376,7 @@ DESKTOP VIEW (>= 1024px)  |  PAGE: "/" (ONE-PAGE MARKETING + ANCHORS)
 ###############################################################################################
 ############################### SECTION 9: NEWSLETTER (ID: #newsletter) ########################
 ###############################################################################################
-[Goal: capture + deliver PDF + consent links]
+[Goal: capture + let users czytać fragment online + consent links]
 
 +---------------------------------------------------------------------------------------------+
 | LABEL: "NEWSLETTER"                                                                         |
@@ -416,7 +416,7 @@ OVERLAYS / SYSTEM COMPONENTS (global)
 2) TOASTS:
    - success/error messages for form submissions (aria-live)
 3) MODAL (optional):
-   - “Darmowy fragment” preview (first paragraph) + download button
+  - “Darmowy fragment” preview (first paragraph) + czytaj online button
 4) 404 page:
    - link back to / + “Zobacz, gdzie kupić”
 
@@ -437,7 +437,7 @@ MOBILE VIEW (<= 640px)  | KEY DIFFERENCES (mobile-first)
 HERO:
   - Label -> H1 -> subtitle -> lead -> Book image -> CTAs stacked
   - CTA stack:
-      [PRIMARY 48px] Pobierz darmowy fragment
+      [PRIMARY 48px] Czytaj fragment online
       [SECONDARY 44px] Zobacz, gdzie kupić
 
 Sections:
@@ -476,7 +476,7 @@ SEO / META FILES (Next.js conventions to include)
 - OG images: app/opengraph-image.(png|jpg) and app/twitter-image.(png|jpg) :contentReference[oaicite:21]{index=21}
 - robots: app/robots.txt (or robots.ts) :contentReference[oaicite:22]{index=22}
 - sitemap: app/sitemap.ts (generate URLs for / + legal + /fragment)
-- public assets: /public/images/*, /public/downloads/*.pdf :contentReference[oaicite:23]{index=23}
+- public assets: /public/images/* :contentReference[oaicite:23]{index=23}
 - JSON-LD: Schema.org Book (@type: Book) :contentReference[oaicite:24]{index=24}
   (Include name, author, inLanguage, datePublished, isbn if present, offers if you want.)
   If you later provide Google a Book feed / ReadAction, follow Google’s Book structured data guide :contentReference[oaicite:25]{index=25}

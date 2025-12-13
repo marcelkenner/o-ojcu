@@ -19,7 +19,7 @@ Marketing site for the memoir "O ojcu, który nigdy nim nie był" built with Nex
 - `src/components/`: layout primitives (Container, SectionShell, header/footer) + UI (Button, Card)
 - `src/content/`: structured copy (`copy.pl.ts`), FAQ JSON, retailers, excerpt.mdx placeholder
 - `src/lib/`: metadata + schema helpers, route constants
-- `public/`: images, downloads (`darmowy-fragment.pdf` placeholder), fonts (optional)
+- `public/`: images (book/press assets), fonts (optional)
 - `docs/`: plans and this playbook
 
 ## Commands
@@ -35,14 +35,14 @@ source ~/.nvm/nvm.sh && npm run lint       # lint with Next ESLint config
 - Mobile-first CSS; keep sections lean and stack nicely on small screens.
 - Keep files < 300 lines; split sections/components if they grow.
 - Follow modular structure: UI primitives in `components/ui`, layout in `components/layout`, copy in `src/content`.
-- No newsletter flow; free fragment is a direct download at `/downloads/darmowy-fragment.pdf`.
+- Fragment flow: primary CTA leads to `/fragment`, which renders `src/content/fragment.md` via `react-markdown`; keep that file Markdown-only and readable on-page (no download flow).
 - Use anchors from `src/lib/routes.ts` for navigation consistency.
 - Keep metadata/SEO in `src/lib/metadata.ts` and `src/app/sitemap.ts` up to date when routes change.
 
 ## QA Checklist
 - `npm run build` passes without TypeScript or ESLint errors.
 - Navigation anchors scroll correctly on mobile and desktop.
-- Fragment download link opens the PDF without form gates.
+- Fragment page renders Markdown (no raw syntax showing).
 - Images resolve from `public/images`; replace placeholders before launch.
 - Sitemap and robots routes respond (check `/sitemap.xml` and `/robots.txt`).
 - Privacy policy reflects the current data flows; update date when editing.

@@ -25,9 +25,9 @@ export default function AboutBook({ copy }: Props) {
         </div>
         <div className="about__image-frame">
           <Image
-            src="/images/cover.jpg"
-            alt="Okładka książki O ojcu, który nigdy nim nie był na stole"
-            width={420}
+            src="/images/ksiazka_na_stole.jpeg"
+            alt="Książka O ojcu, który nigdy nim nie był na drewnianym stole obok kawy i okularów"
+            width={520}
             height={520}
             className="about__image"
           />
