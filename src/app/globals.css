@@ -53,6 +53,7 @@ section:not(:first-of-type) .section__title{font-size:clamp(1.75rem,4vw,2.5rem);
 .grid--four{grid-template-columns:repeat(auto-fit,minmax(180px,1fr));} 
 .grid--three .card__title,.grid--three .card__body{color:var(--text-0);} 
 .section--paper .grid--three .card__title,.section--paper .grid--three .card__body{color:var(--ink-0);} 
+.about .grid--three .card__body,.about .grid--three .card__title,.about .grid--three .muted{color:#4a3a2d;} 
 .where{display:grid;gap:var(--space-6);} 
 .where__intro{color:var(--text-1);margin:0;max-width:720px;} 
 .where__tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:var(--space-8);} 

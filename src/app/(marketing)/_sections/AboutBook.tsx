@@ -18,7 +18,7 @@ export default function AboutBook({ copy }: Props) {
           <div className="grid grid--three">
             {copy.bullets.map((item) => (
               <Card key={item} variant="paper">
-                <p className="muted body">{item}</p>
+                <p className="body">{item}</p>
               </Card>
             ))}
           </div>

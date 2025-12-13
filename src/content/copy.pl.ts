@@ -62,11 +62,11 @@ export const copy: Copy = {
   },
   author: {
     title: "O autorze",
-    name: "[Imię i nazwisko autora]",
-    role: "Reporter i eseista",
-    location: "Warszawa / Berlin",
+    name: "Michał Dobrowolski",
+    role: "Autor książki",
+    location: "",
     story:
-      "Piszę, by dać język tym, którzy dorastali w cieniu milczenia. To książka o wstydzie, ucieczkach i o tym, co zostaje, gdy nie usłyszysz 'przepraszam'.",
+      "Piszę, by dać język tym, którzy dorastali w cieniu milczenia. To książka o wstydzie, ucieczkach i o tym, co zostaje, gdy nie usłyszysz 'przepraszam'. Napisałem ją też, by lepiej zrozumieć własną relację z ojcem i nazwać to, co długo było niewypowiedziane.",
   },
   testimonials: {
     title: "Opinie pierwszych czytelników",
