@@ -43,3 +43,4 @@ source ~/.nvm/nvm.sh && npx http-server dist -p 4173
 - Hero CTA scrolls; accordion toggles keyboard + click.
 - Newsletter form validates email + consent; shows success message.
 - Phosphor icons render (check CDN is reachable).
+- If running on a fresh clone, make sure `src/assets/` exists (script now auto-creates empty targets but warns if missing).
