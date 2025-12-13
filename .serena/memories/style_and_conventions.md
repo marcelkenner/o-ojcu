@@ -1,8 +1,6 @@
-# Style and Conventions
-- Mobile-first design; responsive grids, accessible nav/accordion; include meta viewport.
-- OOP-first: each behavior in dedicated class; prefer composition; separate UI logic (ViewModel/Coordinator patterns); avoid god classes.
-- File size: keep files <300 lines; split functions <40 lines; classes assessed over 200 lines.
-- Naming: descriptive, intention-revealing; avoid vague helpers.
-- Frontend architecture: HTML in `src/pages`, CSS split into components/pages, TypeScript modules under `src/ts` (utils, ui, form, analytics). State in ViewModels/Coordinators, orchestration in `AppCoordinator`.
-- SEO/PWA basics: keep robots.txt, sitemap.xml, manifest in `src/static`; use descriptive alt text; structured data planned for future.
-- Paths: pages link to `styles/main.css` and `js/main.js`; build copies to `dist/`.
+- Obey AGENTS.md: keep files <300 lines; OOP-first mindset; single responsibility; modular components (ViewModel/Manager/Coordinator separation when applicable); avoid god classes; descriptive naming; mobile-first.
+- Use docs/ascii_design.md palette (dark grunge background, cream text, salmon gradient accents) and mobile-first layouts.
+- SEO: keep metadata in src/lib/metadata.ts and sitemap/robots routes aligned with route changes; use anchors from src/lib/routes.ts.
+- No newsletter flow; fragment is direct download at /downloads/darmowy-fragment.pdf.
+- Use @phosphor-icons/react for icons if needed; avoid ad-hoc SVGs.
+- Prefer composition via layout/UI primitives under src/components; keep content in src/content, utilities in src/lib.

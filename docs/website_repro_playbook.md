@@ -1,46 +1,48 @@
 # Website Repro Playbook
 
 ## Purpose
-Marketing site for the memoir "O ojcu, który nigdy nim nie był" built with plain HTML, CSS, and TypeScript (no bundler). Mobile-first and SEO-focused per `website_plan.md`.
+Marketing site for the memoir "O ojcu, który nigdy nim nie był" built with Next.js (App Router, TypeScript). Mobile-first, SEO-focused, newsletter-free download flow.
 
 ## Tech Stack
-- TypeScript compiled via `tsc` (ES modules, ES2020 target).
-- Node.js scripts for copying static assets (no bundler).
-- Output served from `dist/`.
+- Next.js 16 (App Router) + TypeScript, React 19.
+- Styling: Tailwind CSS 4 via global layer + custom CSS tokens (dark, grunge-inspired palette).
+- Fonts: Playfair Display (serif titles) + Inter (body) via `next/font`.
+- Assets served from `public/` (images, downloads, optional fonts).
+- Static data under `src/content/`; utilities under `src/lib/`.
 
 ## Project Layout
-- `src/pages/`: HTML (home + legal + 404).
-- `src/styles/`: CSS split into components/pages; `main.css` imports others.
-- `src/ts/`: TypeScript classes (utils, UI, form, analytics).
-- `src/assets/`: images/icons/pdfs placeholder folders.
-- `src/static/`: root-level files like robots, sitemap, manifest.
-- `scripts/`: `clean.mjs` and `build.mjs` for housekeeping.
-- `dist/`: build output (deploy this).
-- Icons: Phosphor Web Components via CDN (`@phosphor-icons/webcomponents@2.1`) in `src/pages/index.html`.
+- `src/app/`: routing + layouts
+  - `(marketing)/`: one-page marketing route with sectional components
+  - `(legal)/polityka-prywatnosci`: privacy policy
+  - `fragment/`: standalone excerpt landing
+  - `sitemap.ts`, `robots.ts`, `not-found.tsx`, `error.tsx`
+- `src/components/`: layout primitives (Container, SectionShell, header/footer) + UI (Button, Card)
+- `src/content/`: structured copy (`copy.pl.ts`), FAQ JSON, retailers, excerpt.mdx placeholder
+- `src/lib/`: metadata + schema helpers, route constants
+- `public/`: images, downloads (`darmowy-fragment.pdf` placeholder), fonts (optional)
+- `docs/`: plans and this playbook
 
-## Build & Clean
+## Commands
 ```bash
-source ~/.nvm/nvm.sh && npm install        # first time
-source ~/.nvm/nvm.sh && npm run clean      # remove dist
-source ~/.nvm/nvm.sh && npm run build      # tsc -> dist/js + copy static
-```
-
-## Local Preview
-Serve the `dist/` folder with any static server, e.g.:
-```bash
-source ~/.nvm/nvm.sh && npx http-server dist -p 4173
+source ~/.nvm/nvm.sh && npm install        # first setup
+source ~/.nvm/nvm.sh && npm run dev        # local dev at http://localhost:3000
+source ~/.nvm/nvm.sh && npm run build      # production build
+source ~/.nvm/nvm.sh && npm run start      # serve built app
+source ~/.nvm/nvm.sh && npm run lint       # lint with Next ESLint config
 ```
 
 ## Editing Guidelines
-- Keep files < 300 lines; split when needed.
-- OOP-first: use ViewModel/Manager/Coordinator separation; keep UI logic out of HTML.
-- Mobile-first CSS; favor relative units and flexible grids.
-- Update this playbook if build steps or structure change.
+- Mobile-first CSS; keep sections lean and stack nicely on small screens.
+- Keep files < 300 lines; split sections/components if they grow.
+- Follow modular structure: UI primitives in `components/ui`, layout in `components/layout`, copy in `src/content`.
+- No newsletter flow; free fragment is a direct download at `/downloads/darmowy-fragment.pdf`.
+- Use anchors from `src/lib/routes.ts` for navigation consistency.
+- Keep metadata/SEO in `src/lib/metadata.ts` and `src/app/sitemap.ts` up to date when routes change.
 
 ## QA Checklist
-- `npm run build` succeeds without TypeScript errors.
-- Links load from `dist/` (styles/js relative paths).
-- Hero CTA scrolls; accordion toggles keyboard + click.
-- Newsletter form validates email + consent; shows success message.
-- Phosphor icons render (check CDN is reachable).
-- If running on a fresh clone, make sure `src/assets/` exists (script now auto-creates empty targets but warns if missing).
+- `npm run build` passes without TypeScript or ESLint errors.
+- Navigation anchors scroll correctly on mobile and desktop.
+- Fragment download link opens the PDF without form gates.
+- Images resolve from `public/images`; replace placeholders before launch.
+- Sitemap and robots routes respond (check `/sitemap.xml` and `/robots.txt`).
+- Privacy policy reflects the current data flows; update date when editing.
