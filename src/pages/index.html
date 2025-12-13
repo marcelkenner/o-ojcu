@@ -40,7 +40,7 @@
           </div>
         </div>
         <div class="hero__media" aria-hidden="true">
-          <div class="book-cover" role="img" aria-label="Okładka książki"></div>
+          <img class="book-mockup-img" src="assets/img/book-cover.png" alt="Trójwymiarowa makieta okładki książki" loading="lazy">
           <p class="badge">Premiera 20XX</p>
         </div>
       </section>
@@ -52,15 +52,15 @@
           <p>Nie jest to akt oskarżenia, ale język pocieszenia dla tych, którzy dorastali w ciszy. Słowa dla terapeutów, nauczycieli i bliskich, którzy chcą lepiej rozumieć.</p>
         </div>
         <div class="grid grid--two">
-          <ul class="pill-list">
-            <li><ph-heart-break weight="duotone"></ph-heart-break> Dorastałeś z ojcem, którego wszyscy chwalili, a Ty bałeś się jego kroków.</li>
-            <li><ph-mask-sad weight="duotone"></ph-mask-sad> Szukasz słów, by opisać napięcie w domu i milczenie przy stole.</li>
-            <li><ph-compass weight="duotone"></ph-compass> Chcesz, by ktoś nazwał to, co czułeś jako dziecko – bez patosu.</li>
-          </ul>
-          <ul class="pill-list">
-            <li><ph-chats-circle weight="duotone"></ph-chats-circle> Jesteś terapeutą lub nauczycielem i potrzebujesz historii, którą polecisz podopiecznym.</li>
-            <li><ph-map-trifold weight="duotone"></ph-map-trifold> Interesuje Cię polskie ojcostwo, jego brak i cena, którą płacą dzieci.</li>
-          </ul>
+          <ol class="pill-list pill-list--numbered" start="1">
+            <li><span class="grid-item-number">1</span><p>Dorastałeś z ojcem, którego wszyscy chwalili, a Ty bałeś się jego kroków.</p></li>
+            <li><span class="grid-item-number">2</span><p>Szukasz słów, by opisać napięcie w domu i milczenie przy stole.</p></li>
+            <li><span class="grid-item-number">3</span><p>Chcesz, by ktoś nazwał to, co czułeś jako dziecko – bez patosu.</p></li>
+          </ol>
+          <ol class="pill-list pill-list--numbered" start="4">
+            <li><span class="grid-item-number">4</span><p>Jesteś terapeutą lub nauczycielem i potrzebujesz historii, którą polecisz podopiecznym.</p></li>
+            <li><span class="grid-item-number">5</span><p>Interesuje Cię polskie ojcostwo, jego brak i cena, którą płacą dzieci.</p></li>
+          </ol>
         </div>
       </section>
 
@@ -87,12 +87,12 @@
           <p class="eyebrow">Fragment</p>
           <h2>Noc z policją</h2>
         </div>
-        <div class="excerpt">
-          <p><em>„Drzwi były cięższe niż pamiętałem. Wiedziałem, że jeśli dziś zadzwonię, sąsiedzi usłyszą. Ale pierwszy raz byłem gotów.”</em></p>
+        <div class="excerpt excerpt--paper">
+          <p class="excerpt__quote">„Drzwi były cięższe niż pamiętałem. Wiedziałem, że jeśli dziś zadzwonię, sąsiedzi usłyszą. Ale pierwszy raz byłem gotów.”</p>
           <p>Fragment PDF obejmuje Prolog i pełną scenę nocy z policją. Pobierz, jeśli potrzebujesz języka do własnej rozmowy.</p>
           <div class="hero__actions">
             <a class="button button--primary" href="#kontakt">Pobierz darmowy fragment w PDF</a>
-            <a class="button button--ghost" href="#gdzie-kupic">Zobacz, gdzie kupić</a>
+            <a class="button button--ghost button--ghost-dark" href="#gdzie-kupic">Zobacz, gdzie kupić</a>
           </div>
           <p class="form__hint">Darmowy fragment obejmuje Prolog i scenę nocy z policją.</p>
         </div>
@@ -104,21 +104,25 @@
           <h2>Cztery części – cztery pytania</h2>
           <p>Układ jest tematyczny, nie chronologiczny. Każda część to inne spojrzenie na brak i próbę nazwania go.</p>
         </div>
-        <div class="card-grid">
-          <article class="card">
-            <h3><ph-house-line weight="duotone"></ph-house-line> I. Dom</h3>
+        <div class="card-grid card-grid--parts">
+          <article class="card card--part">
+            <span class="card__numeral" aria-hidden="true">I</span>
+            <h3>Dom</h3>
             <p>Jak wygląda dom, w którym nikt nie mówi głośno o strachu.</p>
           </article>
-          <article class="card">
-            <h3><ph-airplane weight="duotone"></ph-airplane> II. Ucieczka</h3>
+          <article class="card card--part">
+            <span class="card__numeral" aria-hidden="true">II</span>
+            <h3>Ucieczka</h3>
             <p>Emigracja jako szansa na ciszę i nowe słowa.</p>
           </article>
-          <article class="card">
-            <h3><ph-phone-call weight="duotone"></ph-phone-call> III. Powroty</h3>
+          <article class="card card--part">
+            <span class="card__numeral" aria-hidden="true">III</span>
+            <h3>Powroty</h3>
             <p>Rozmowy telefoniczne, które przychodzą za późno.</p>
           </article>
-          <article class="card">
-            <h3><ph-pencil-circle weight="duotone"></ph-pencil-circle> IV. Imiona</h3>
+          <article class="card card--part">
+            <span class="card__numeral" aria-hidden="true">IV</span>
+            <h3>Imiona</h3>
             <p>Szukanie języka, który pozwoli nazwać brak.</p>
           </article>
         </div>
@@ -130,7 +134,7 @@
           <h2>Dlaczego to napisałem</h2>
         </div>
         <div class="feature feature--split">
-          <div class="author-photo" role="img" aria-label="Zdjęcie autora"></div>
+          <img class="author-photo" src="assets/img/author-portrait.svg" alt="Czarno-biały portret autora" loading="lazy">
           <div>
             <p>Napisałem tę książkę, żeby dać głos dzieciom, które słyszały wszystko, oprócz przeprosin. To osobista opowieść, ale też list do tych, którzy wciąż czekają na inne zakończenie.</p>
             <p>Autor jest reporterem i tłumaczem. Mieszka między Polską a emigracją, zbiera historie o milczeniu i powrotach.</p>
@@ -144,16 +148,16 @@
           <h2>Wasze głosy</h2>
         </div>
         <div class="card-grid">
-          <article class="card">
-            <p>„Czytałam jednym tchem. Wreszcie ktoś powiedział to, co myślałam przez lata.”</p>
+          <article class="card card--quote">
+            <p class="quote-text">„Czytałam jednym tchem. Wreszcie ktoś powiedział to, co myślałam przez lata.”</p>
             <p class="caption">— Joanna, psycholożka</p>
           </article>
-          <article class="card">
-            <p>„Ta książka jest jak rozmowa, której nigdy nie odbyłem z ojcem.”</p>
+          <article class="card card--quote">
+            <p class="quote-text">„Ta książka jest jak rozmowa, której nigdy nie odbyłem z ojcem.”</p>
             <p class="caption">— Marek, czytelnik</p>
           </article>
-          <article class="card">
-            <p>„Precyzyjna, czuła i bez sentymentalizmu. Warta polecenia każdemu terapeucie.”</p>
+          <article class="card card--quote">
+            <p class="quote-text">„Precyzyjna, czuła i bez sentymentalizmu. Warta polecenia każdemu terapeucie.”</p>
             <p class="caption">— dr Anna K., terapeutka</p>
           </article>
         </div>

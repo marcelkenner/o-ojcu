@@ -8,7 +8,7 @@
   font-weight: 700;
   border: 2px solid transparent;
   cursor: pointer;
-  transition: transform 150ms ease, box-shadow 150ms ease, background 150ms ease, border-color 150ms ease;
+  transition: transform 150ms ease, box-shadow 150ms ease, background 150ms ease, border-color 150ms ease, filter 150ms ease;
   text-decoration: none;
 }
 
@@ -17,7 +17,7 @@
   color: #fff;
   box-shadow: var(--shadow-soft);
 }
-.button--primary:hover { background: var(--primary-dark); transform: translateY(-1px); }
+.button--primary:hover { background: var(--primary-dark); transform: translateY(-1px) scale(1.05); filter: brightness(1.03); }
 
 .button--ghost {
   background: transparent;
@@ -25,6 +25,12 @@
   color: var(--accent);
 }
 .button--ghost:hover { background: rgba(127, 195, 255, 0.12); }
+
+.button--ghost-dark {
+  border-color: #1f1f1f;
+  color: #1f1f1f;
+}
+.button--ghost-dark:hover { background: rgba(0, 0, 0, 0.08); }
 
 .button--link { padding: 0; border: none; color: var(--accent); background: none; }
 

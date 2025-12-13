@@ -11,3 +11,30 @@
 .card--cta { display: grid; gap: 12px; align-content: start; }
 
 .caption { color: var(--caption, #b8b4ae); margin-top: 10px; }
+
+.card--part {
+  background: transparent;
+  border: 1px solid #2a2a2a;
+  box-shadow: none;
+  position: relative;
+  overflow: hidden;
+  padding: 24px;
+}
+.card__numeral {
+  position: absolute;
+  top: -6px;
+  right: 12px;
+  font-family: var(--font-serif);
+  font-size: 3.6rem;
+  color: rgba(255, 255, 255, 0.06);
+  pointer-events: none;
+  letter-spacing: 0.08em;
+}
+
+.card--quote {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 6px 0;
+}
+.card--quote .caption { color: var(--color-text-secondary); }
