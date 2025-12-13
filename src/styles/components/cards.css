@@ -1,0 +1,11 @@
+.card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+
+.card--cta { display: grid; gap: 10px; align-content: start; }
+
+.caption { color: #5a5552; margin-top: 10px; }

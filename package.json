@@ -1,0 +1,19 @@
+{
+  "name": "o-ojcu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/js/main.js",
+  "scripts": {
+    "clean": "node scripts/clean.mjs",
+    "build:ts": "tsc -p tsconfig.json",
+    "build:static": "node scripts/build.mjs",
+    "build": "npm run clean && npm run build:ts && npm run build:static"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}

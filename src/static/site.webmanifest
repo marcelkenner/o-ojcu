@@ -1,0 +1,9 @@
+{
+  "name": "O ojcu, który nigdy nim nie był",
+  "short_name": "O ojcu",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f5f2",
+  "theme_color": "#b3472f",
+  "icons": []
+}

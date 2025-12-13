@@ -1,0 +1,7 @@
+node_modules
+.dist
+dist
+public/js
+public/assets
+public/styles
+.DS_Store
