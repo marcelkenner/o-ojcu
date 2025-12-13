@@ -89,6 +89,8 @@ section:not(:first-of-type) .section__title{font-size:clamp(1.75rem,4vw,2.5rem);
 .author__text{display:grid;gap:var(--space-4);} 
 .author__photo{justify-self:center;} 
 .author__img{border-radius:999px;border:3px solid var(--line-0);object-fit:cover;} 
+.author__visual{justify-self:center;max-width:420px;} 
+.author__visual img{display:block;width:100%;height:auto;} 
 .excerpt{display:grid;gap:var(--space-6);align-items:start;} 
 .excerpt__box{display:grid;gap:var(--space-5);padding:var(--space-6);box-shadow:var(--shadow-md);border-radius:var(--r-lg);background:var(--paper-0);color:var(--ink-0);border:1px solid rgba(43,34,26,.16);position:relative;overflow:hidden;} 
 .excerpt__box::before{content:"";position:absolute;inset:0 auto 0 0;width:6px;background:linear-gradient(180deg,var(--accent-0),var(--accent-1));box-shadow:0 0 18px rgba(255,126,103,.55);opacity:.9;}
@@ -97,9 +99,13 @@ section:not(:first-of-type) .section__title{font-size:clamp(1.75rem,4vw,2.5rem);
 .excerpt--page .excerpt__actions{margin-top:var(--space-8);} 
 .quote{font-family:var(--font-serif,"Playfair Display",serif);font-size:1rem;margin:0 0 var(--space-3);line-height:1.5;} 
 .faq{display:grid;gap:var(--space-3);} 
-.faq__item{border:1px solid rgba(47,36,26,.12);border-radius:var(--r-md);padding:var(--space-4) var(--space-5);background:#fff;} 
-.faq__item summary{cursor:pointer;font-weight:600;list-style:none;min-height:44px;} 
+.faq__item{border:1px solid rgba(47,36,26,.12);border-radius:var(--r-lg);padding:var(--space-5);background:linear-gradient(140deg,rgba(240,234,221,.16),rgba(240,234,221,.06));box-shadow:var(--shadow-sm);transition:transform 160ms ease,box-shadow 200ms ease,border-color 180ms ease;} 
+.faq__item:hover{transform:translateY(-2px);box-shadow:0 14px 38px rgba(0,0,0,.22);border-color:rgba(43,34,26,.2);} 
+.faq__item summary{cursor:pointer;font-weight:700;list-style:none;min-height:44px;display:flex;align-items:center;justify-content:space-between;gap:var(--space-3);font-size:1.02rem;color:var(--ink-0);} 
 .faq__item summary::-webkit-details-marker{display:none;} 
+.faq__item summary::after{content:"+";font-size:1.2rem;color:var(--accent-1);transition:transform 160ms ease;} 
+.faq__item[open] summary::after{transform:rotate(45deg);} 
+.faq__item p{margin:var(--space-3) 0 0;color:var(--ink-0);} 
 .markdown{display:grid;gap:var(--space-4);line-height:1.7;font-size:1rem;color:var(--text-0);} 
 .markdown h1,.markdown h2,.markdown h3{font-family:var(--font-serif,"Playfair Display",serif);line-height:1.2;margin:0;} 
 .markdown p{margin:0;} 

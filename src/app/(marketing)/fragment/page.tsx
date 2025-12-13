@@ -7,6 +7,7 @@ import { withMetadata } from "@/lib/metadata";
 import { routes } from "@/lib/routes";
 import SectionShell from "@/components/layout/SectionShell";
 import Container from "@/components/layout/Container";
+import Button from "@/components/ui/Button";
 
 export const metadata = withMetadata({
   title: "Czytaj fragment",
@@ -36,6 +37,9 @@ export default async function FragmentPage() {
           <CardFallback />
         )}
         <div className="excerpt__actions">
+          <Button as="a" href="https://www.empik.com" target="_blank" rel="noopener noreferrer" size="md">
+            Kup w Empiku
+          </Button>
           <Link href={routes.home} className="nav-link">
             Wróć na stronę główną
           </Link>

@@ -54,10 +54,10 @@ export const copy: Copy = {
   contents: {
     title: "Co znajdziesz w środku",
     parts: [
-      { title: "Część I – Dzieciństwo", summary: "Dom pełen ciszy, wstydu i wyuczonych reakcji." },
-      { title: "Część II – Ucieczka", summary: "Emigracja, praca ponad siły i próby zapomnienia." },
-      { title: "Część III – Powroty", summary: "Spotkania po latach, rozmowy, które nigdy nie padły." },
-      { title: "Część IV – Nazywanie", summary: "Próba zrozumienia, jak brak ojcostwa kształtuje dorosłe życie." },
+      { title: "Część I – MĘŻCZYZNA Z MIASTA, KTÓREGO PRAWIE NIE MA", summary: "Korzenie, miasteczko, dzieciństwo; czasem skok do „nocy z policją”." },
+      { title: "Część II – OJCIEC, KTÓREMU CIĄGLE BRAKUJE", summary: "Bieda, relacje, emocje, których brakuje – i których jest za dużo." },
+      { title: "Część III – EMIGRANT, KTÓRY NIE ZABIERA ZE SOBĄ JĘZYKA", summary: "Wyjazdy, praca ponad siły, życie na obczyźnie bez słów na bliskość." },
+      { title: "Część IV – OJCOSTWO, KTÓRE SIĘ NIE WYDARZYŁO", summary: "Dorosły narrator, wyprowadzka, przebaczenie „z ograniczoną odpowiedzialnością”." }
     ],
   },
   author: {
