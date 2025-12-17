@@ -9,12 +9,12 @@ import ScrollProgressBar from "@/components/ui/ScrollProgressBar";
 import MobileCtaBar from "@/components/ui/MobileCtaBar";
 
 const playfair = Playfair_Display({
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext"],
   variable: "--font-serif",
 });
 
 const inter = Inter({
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext"],
   variable: "--font-sans",
 });
 
@@ -24,15 +24,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const jsonLd = buildBookJsonLd();
   return (
     <html lang="pl">
-      <body className={`${playfair.variable} ${inter.variable} theme-sand`}>
+      <body className={`${playfair.variable} ${inter.variable}`}>
         <div className="page-shell">
+          <a className="skip-link" href="#main-content">
+            Przejdź do treści
+          </a>
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
           />
           <ScrollProgressBar />
           <SiteHeader />
-          <main>{children}</main>
+          <main id="main-content">{children}</main>
           <MobileCtaBar />
           <SiteFooter />
         </div>

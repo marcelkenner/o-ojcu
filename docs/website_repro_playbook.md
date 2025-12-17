@@ -35,7 +35,7 @@ source ~/.nvm/nvm.sh && npm run lint       # lint with Next ESLint config
 - Mobile-first CSS; keep sections lean and stack nicely on small screens.
 - Keep files < 300 lines; split sections/components if they grow.
 - Follow modular structure: UI primitives in `components/ui`, layout in `components/layout`, copy in `src/content`.
-- Fragment flow: primary CTA leads to `/fragment`, which renders `src/content/fragment.md` via `react-markdown`; keep that file Markdown-only and readable on-page (no download flow).
+- Fragment flow: primary CTA leads to `/fragment`, which renders `src/content/fragment.md` via `react-markdown` + `remark-gfm` (tables/task lists supported) using `src/components/ui/MarkdownReader.tsx`; keep that file Markdown-only and readable on-page (no download flow).
 - Use anchors from `src/lib/routes.ts` for navigation consistency.
 - Keep metadata/SEO in `src/lib/metadata.ts` and `src/app/sitemap.ts` up to date when routes change.
 

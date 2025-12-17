@@ -1,8 +1,8 @@
-**Mężczyzna bez przyjaciół**
+## Mężczyzna bez przyjaciół
 
 Ten sam blok, ta sama klatka, ten sam mężczyźna krążący między pracą, sklepem a ławką pod blokiem. Jestem w podstawówce, rosnę gdzieś między zeszytami, podwórkiem a kuchennym stołem. Patrzę na mojego ojca i długo myślę, że to jest człowiek, który ma wielu ludzi wokół siebie.
 
-Dopiero później rozumiem, że to nie to samo, co mieć przyjaciół.
+Dopiero później rozumiem, że to nie to samo, co mieć **przyjaciół**.
 
 ---
 
@@ -10,9 +10,9 @@ Najbliżej tej definicji byli przez chwilę dwaj mężczyźni: sąsiad i szwagie
 
 Sąsiad był „z klatki”, „z naszego bloku”, „swój”. Drzwi dzieliło nas niewiele, może jedno piętro, może kilka kroków. Czasem słyszałem, jak pukają do siebie nawzajem: krótkie, męskie „jest?”, potem skrzypnięcie zawiasów i powtarzalne:
 
-– Co tam, żyjesz?
-
-– A gdzie ja nie żyję.
+> – Co tam, żyjesz?
+>
+> – A gdzie ja nie żyję.
 
 Ojciec wpadał do niego „na chwilę”. Bez zapowiedzi, bez kwiatów, bez ciasta – tylko z reklamówką, w której coś brzęczało. Nasze mieszkanie było za małe, żeby urządzać w nim dłuższe posiedzenia, więc to on był „tym, co wychodzi”. Wracał później późnym wieczorem, z zapachem dymu i alkoholu w ubraniach, z głową pełną cudzych problemów i własnego zmęczenia.
 
@@ -36,23 +36,24 @@ W tle zawsze istniał jeszcze ten drugi rytm – adrenalina, która lekko podska
 
 Kiedy w końcu otwierały się drzwi i do mieszkania wchodził ojciec, można było od razu stwierdzić, jak wyglądał jego wieczór.
 
-Jeśli śmiał się za głośno i mówił za dużo, to znaczyło, że zalali zmęczenie alkoholem.
-
-Jeśli wchodził przygaszony, milczący, z ciężkim krokiem – też znaczyło, że pili. Tylko inaczej.
+- Jeśli śmiał się za głośno i mówił za dużo, to znaczyło, że zalali zmęczenie alkoholem.
+- Jeśli wchodził przygaszony, milczący, z ciężkim krokiem – też znaczyło, że pili. Tylko inaczej.
 
 Nie pamiętam jednej konkretnej „katastrofy”, sceny, którą można by cytować jak finał filmu. Pamiętam za to dziesiątki małych powrotów „w złym stanie”. Niewyraźna mowa, przekrwione oczy, zapach, który zderzał się z zapachem naszego mieszkania jak obcy gość.
 
-Matka na pewno tego nie lubiła. Nie musiała nic mówić. Wystarczył sposób, w jaki stawiała talerz, w jaki odkładała szklankę, w jaki milczała przy stole. W domu napięcia rzadko wybuchają słowami. Częściej stoją w rogu pokoju i patrzą.
+Matka na pewno tego nie lubiła. Nie musiała nic mówić. Wystarczył sposób, w jaki stawiała talerz, w jaki odkładała szklankę, w jaki milczała przy stole.
+
+> W domu napięcia rzadko wybuchają słowami. Częściej stoją w rogu pokoju i patrzą.
 
 ---
 
 Kiedy ojciec mówił o swoich „ludziach”, zawsze lokował ich gdzieś poza domem.
 
-– Ten z pracy…
-
-– Ten ze stołówki…
-
-– Ten, co mieszka obok.
+> – Ten z pracy…
+>
+> – Ten ze stołówki…
+>
+> – Ten, co mieszka obok.
 
 Ich relacje miały swoje miejsca: szatnia, hala produkcyjna, stołówka, sklep. Widział ich codziennie, czasem częściej niż własne dzieci, ale to nadal byli „koledzy”. Brzmi to jak słowo ciepłe, w praktyce było chłodne.
 
@@ -60,7 +61,7 @@ W pracy byli razem, bo musieli. Razem nosili, dźwigali, narzekali na tempo i na
 
 Na papierze ojciec miał więc krąg ludzi wokół siebie. W rzeczywistości każda z tych relacji kończyła się tam, gdzie kończyła się zmiana, zakupy, flaszka.
 
-Nie miał nikogo, z kim spotykałby się „tak po prostu”, bez powodu. Nikogo, z kim umawiałby się na spacer, mecz, wyjazd, rozmowę. Zawsze było jakieś „przy okazji”: przy okazji pracy, przy okazji picia, przy okazji rodzinnej imprezy.
+Nie miał nikogo, z kim spotykałby się „tak po prostu”, bez powodu. Nikogo, z kim umawiałby się na spacer, mecz, wyjazd, rozmowę. Zawsze było jakieś *„przy okazji”*: przy okazji pracy, przy okazji picia, przy okazji rodzinnej imprezy.
 
 Może to dlatego nikt z nich nie został w jego życiu na dłużej.
 
@@ -70,13 +71,13 @@ Najłatwiej to zobaczyć w tym, co działo się po czasie.
 
 Pewnego dnia zauważyłem, że nazwiska, które kiedyś padały często, przestają się pojawiać w rozmowach. Ten od wózków widłowych, ten ze szlifierni, ten od „januszowania” – znikali po cichu.
 
-– A co z nim? – zdarzało się, że zapytała matka.
-
-– Gdzieś pojechał.
-
-– Gdzieś indziej robi.
-
-– Zniknął.
+> – A co z nim? – zdarzało się, że zapytała matka.
+>
+> – Gdzieś pojechał.
+>
+> – Gdzieś indziej robi.
+>
+> – Zniknął.
 
 Ton ojca był przy tym wzruszeniu ramion: trochę żal, trochę obojętność. Jakby mówił o maszynie, którą wymieniono na inną, a nie o człowieku, z którym dzielił tyle przerw, przekleństw i papierosów.
 

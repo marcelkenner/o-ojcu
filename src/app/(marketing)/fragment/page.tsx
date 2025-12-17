@@ -1,45 +1,48 @@
-import fs from "node:fs/promises";
-import path from "node:path";
 import Link from "next/link";
-import ReactMarkdown from "react-markdown";
 import { copy } from "@/content/copy.pl";
+import retailers from "@/content/retailers.json";
 import { withMetadata } from "@/lib/metadata";
 import { routes } from "@/lib/routes";
 import SectionShell from "@/components/layout/SectionShell";
 import Container from "@/components/layout/Container";
 import Button from "@/components/ui/Button";
+import Card from "@/components/ui/Card";
+import MarkdownReader from "@/components/ui/MarkdownReader";
+import FragmentMarkdownRepository from "@/lib/fragment/FragmentMarkdownRepository";
+import ReadingStatsCalculator from "@/lib/reading/ReadingStatsCalculator";
 
 export const metadata = withMetadata({
   title: "Czytaj fragment",
   description: "Pierwszy rozdział do przeczytania online — bez pobierania i bez zapisu.",
 });
 
-async function loadFragment(): Promise<string | null> {
-  const filePath = path.join(process.cwd(), "src", "content", "fragment.md");
-  try {
-    return await fs.readFile(filePath, "utf8");
-  } catch {
-    return null;
-  }
-}
-
 export default async function FragmentPage() {
-  const fragmentContent = await loadFragment();
+  const fragmentContent = await new FragmentMarkdownRepository().load();
+  const stats = fragmentContent ? new ReadingStatsCalculator().fromMarkdown(fragmentContent) : null;
+  const primaryRetailer = (retailers as { name: string; url: string }[])[0];
   return (
-    <SectionShell title={copy.excerpt.title} eyebrow="Fragment">
+    <SectionShell title={copy.excerpt.title} eyebrow="Fragment" intro={copy.excerpt.intro}>
       <Container className="excerpt excerpt--page">
-        <p className="lede">{copy.excerpt.intro}</p>
+        {stats && (
+          <div className="reading-meta">
+            <p className="fine-print reading-meta__stats">{`~${stats.minuteEstimate} min czytania • ${stats.wordCount} słów`}</p>
+          </div>
+        )}
+
         {fragmentContent ? (
-          <article className="markdown">
-            <ReactMarkdown>{fragmentContent}</ReactMarkdown>
-          </article>
+          <Card variant="paper" className="reading-card">
+            <MarkdownReader markdown={fragmentContent} />
+          </Card>
         ) : (
           <CardFallback />
         )}
+
         <div className="excerpt__actions">
-          <Button as="a" href="https://www.empik.com" target="_blank" rel="noopener noreferrer" size="md">
-            Kup w Empiku
-          </Button>
+          {primaryRetailer && (
+            <Button as="a" href={primaryRetailer.url} target="_blank" rel="noopener noreferrer" size="md">
+              Kup w {primaryRetailer.name}
+            </Button>
+          )}
           <Link href={routes.home} className="nav-link">
             Wróć na stronę główną
           </Link>
@@ -51,12 +54,12 @@ export default async function FragmentPage() {
 
 function CardFallback() {
   return (
-    <div className="card">
+    <Card variant="paper" className="reading-card">
       <p className="body">
         Dodaj plik <code>src/content/fragment.md</code> z rozdziałem w formacie Markdown, aby wyświetlić go na tej
         stronie.
       </p>
-      <p className="muted">Obsługujemy podstawowe formatowanie: nagłówki, akapity, listy, cytaty.</p>
-    </div>
+      <p className="muted">Obsługujemy podstawowe formatowanie: nagłówki, akapity, listy, cytaty, tabele.</p>
+    </Card>
   );
 }
