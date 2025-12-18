@@ -55,10 +55,10 @@ These are the names you use in Figma + documentation (and optionally map to Tail
 * `stackSm`: **12**
 * `stackMd`: **16**
 * `stackLg`: **24**
-* `sectionPadY`: **80 mobile**, **120 desktop**
-* `sectionGapY`: **96 mobile**, **160 desktop**
+* `sectionPadY`: **48 mobile**, **80 desktop**
+* `sectionGapY`: **16 mobile**, **32 desktop**
 * `heroPadTop`: **120** (matches your ASCII)
-* `heroPadBottom`: **80–120** (depends if hero is tall)
+* `heroPadBottom`: **80-120** (depends if hero is tall)
 
 ---
 
@@ -137,12 +137,7 @@ Standard pattern per section:
 
 ---
 
-## 5) Section spacing (the page “rhythm”)
-
-You already used:
-
-* **Top padding 120px**
-* **Section spacing 160px**
+## 5) Section spacing (the page "rhythm")
 
 Lock it as a system:
 
@@ -150,12 +145,12 @@ Lock it as a system:
 
 * `sectionPadY`:
 
-  * Mobile: **80px** (`py-20`)
-  * Desktop: **120px** (`py-30` custom or `py-[120px]` *only if you add it as a token*)
+  * Mobile: **48px** (`py-12`)
+  * Desktop: **80px** (`py-20`)
 * `sectionGapY`:
 
-  * Mobile: **96px** (`mt-24`)
-  * Desktop: **160px** (`mt-40`)
+  * Mobile: **16px** (`mt-4`)
+  * Desktop: **32px** (`mt-8`)
 
 ### 5.2 Section-specific overrides
 
@@ -206,10 +201,10 @@ module.exports = {
         'gutter-md': '1.5rem', // 24px
         'gutter-xl': '2.5rem', // 40px
 
-        'section-y-mobile': '5rem',  // 80px
-        'section-y-desktop': '7.5rem', // 120px
-        'section-gap-mobile': '6rem',  // 96px
-        'section-gap-desktop': '10rem' // 160px
+        'section-y-mobile': '3rem',  // 48px
+        'section-y-desktop': '5rem', // 80px
+        'section-gap-mobile': '1rem',  // 16px
+        'section-gap-desktop': '2rem' // 32px
       },
     },
   },
