@@ -27,9 +27,15 @@ Marketing site for the memoir "O ojcu, który nigdy nim nie był" built with Nex
 source ~/.nvm/nvm.sh && npm install        # first setup
 source ~/.nvm/nvm.sh && npm run dev        # local dev at http://localhost:3000
 source ~/.nvm/nvm.sh && npm run build      # production build
+source ~/.nvm/nvm.sh && npm run preview    # Cloudflare Workers preview via OpenNext
+source ~/.nvm/nvm.sh && npm run deploy     # Cloudflare Workers deploy via OpenNext
 source ~/.nvm/nvm.sh && npm run start      # serve built app
 source ~/.nvm/nvm.sh && npm run lint       # lint with Next ESLint config
 ```
+
+## Cloudflare Workers Builds
+- Deploy command: `npm run deploy`
+- Root directory: repo root (must contain `wrangler.toml`)
 
 ## Editing Guidelines
 - Mobile-first CSS; keep sections lean and stack nicely on small screens.
