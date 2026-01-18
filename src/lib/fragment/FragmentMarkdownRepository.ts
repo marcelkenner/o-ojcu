@@ -1,22 +1,15 @@
-import fs from "node:fs/promises";
-import path from "node:path";
+import fragmentMarkdown from "@/content/fragment.md";
 
 export class FragmentMarkdownRepository {
-  private readonly relativePath: string[];
+  private readonly markdown: string;
 
-  constructor(relativePath: string[] = ["src", "content", "fragment.md"]) {
-    this.relativePath = relativePath;
+  constructor(markdown: string = fragmentMarkdown) {
+    this.markdown = markdown;
   }
 
   public async load(): Promise<string | null> {
-    const filePath = path.join(process.cwd(), ...this.relativePath);
-    try {
-      return await fs.readFile(filePath, "utf8");
-    } catch {
-      return null;
-    }
+    return this.markdown;
   }
 }
 
 export default FragmentMarkdownRepository;
-

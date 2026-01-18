@@ -42,7 +42,7 @@ source ~/.nvm/nvm.sh && npm run lint       # lint with Next ESLint config
 - Keep files < 300 lines; split sections/components if they grow.
 - Follow modular structure: UI primitives in `components/ui`, layout in `components/layout`, copy in `src/content`.
 - Global section rhythm lives in `src/app/globals.css` via `--section-py-*` and `--section-gap-*`.
-- Fragment flow: primary CTA leads to `/fragment`, which renders `src/content/fragment.md` via `react-markdown` + `remark-gfm` (tables/task lists supported) using `src/components/ui/MarkdownReader.tsx`; keep that file Markdown-only and readable on-page (no download flow).
+- Fragment flow: primary CTA leads to `/fragment`, which renders bundled `src/content/fragment.md` (no runtime filesystem access; Cloudflare Workers-safe) via `react-markdown` + `remark-gfm` using `src/components/ui/MarkdownReader.tsx`; keep that file Markdown-only and readable on-page (no download flow).
 - Use anchors from `src/lib/routes.ts` for navigation consistency.
 - Keep metadata/SEO in `src/lib/metadata.ts` and `src/app/sitemap.ts` up to date when routes change.
 
