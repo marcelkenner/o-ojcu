@@ -12,15 +12,21 @@ import ArticleMarkdownRepository from "@/lib/articles/ArticleMarkdownRepository"
 import retailers from "@/content/retailers.json";
 import type { Retailer } from "@/types";
 import BuyBookCta from "@/components/articles/BuyBookCta";
+import type { RouteParams } from "@/lib/routing/RouteParamsResolver";
+import { RouteParamsResolver } from "@/lib/routing/RouteParamsResolver";
 
 type Params = { slug: string };
+type ArticlePageProps = { params: RouteParams<Params> };
 
-export function generateStaticParams(): Params[] {
+const paramsResolver = new RouteParamsResolver<Params>();
+
+export async function generateStaticParams(): Promise<Params[]> {
   return new ArticleCatalog().slugs().map((slug) => ({ slug }));
 }
 
-export function generateMetadata({ params }: { params: Params }): Metadata {
-  const article = new ArticleCatalog().findBySlug(params.slug);
+export async function generateMetadata({ params }: ArticlePageProps): Promise<Metadata> {
+  const resolvedParams = await paramsResolver.resolve(params);
+  const article = new ArticleCatalog().findBySlug(resolvedParams.slug);
   if (!article) return withMetadata({ title: "Artykuł" });
   return withMetadata({
     title: article.title,
@@ -28,8 +34,9 @@ export function generateMetadata({ params }: { params: Params }): Metadata {
   });
 }
 
-export default async function ArticlePage({ params }: { params: Params }) {
-  const article = new ArticleCatalog().findBySlug(params.slug);
+export default async function ArticlePage({ params }: ArticlePageProps) {
+  const resolvedParams = await paramsResolver.resolve(params);
+  const article = new ArticleCatalog().findBySlug(resolvedParams.slug);
   if (!article) notFound();
 
   const markdown = await new ArticleMarkdownRepository(article).load();
@@ -54,4 +61,3 @@ export default async function ArticlePage({ params }: { params: Params }) {
     </SectionShell>
   );
 }
-
