@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { navLinks } from "@/lib/routes";
+import { navLinks, routes } from "@/lib/routes";
 import Button from "@/components/ui/Button";
 import Container from "./Container";
 
@@ -16,6 +16,9 @@ export function SiteHeader() {
               {item.label}
             </Link>
           ))}
+          <Link href={routes.articles} className="nav-link">
+            Artykuły
+          </Link>
         </nav>
         <div className="site-header__cta">
           <Button as="a" href="/fragment" size="sm">

@@ -7,6 +7,7 @@ import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
 import ScrollProgressBar from "@/components/ui/ScrollProgressBar";
 import MobileCtaBar from "@/components/ui/MobileCtaBar";
+import HashScrollCoordinator from "@/components/routing/HashScrollCoordinator";
 
 const playfair = Playfair_Display({
   subsets: ["latin", "latin-ext"],
@@ -34,6 +35,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
           />
           <ScrollProgressBar />
+          <HashScrollCoordinator />
           <SiteHeader />
           <main id="main-content">{children}</main>
           <MobileCtaBar />
