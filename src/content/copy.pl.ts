@@ -88,6 +88,40 @@ export const copy: Copy = {
       },
     ],
   },
+  readerStories: {
+    title: "Wasze historie",
+    intro:
+      "Kilka krótkich, anonimowych migawek od czytelników. Imiona i detale zostały zmienione — sens pozostał ten sam.",
+    list: [
+      {
+        title: "„Klucze w zamku”",
+        paragraphs: [
+          "Wszyscy mówili, że mam dobrego ojca — bo pracował. A ja pamiętałam tylko ten dźwięk: klucze, ciszę, napięcie w ramionach.",
+          "Czytając, pierwszy raz zobaczyłam, że to też jest przemoc: nie zawsze krzyk, czasem właśnie brak słów.",
+        ],
+        name: "Ola, 32",
+        role: "czytelniczka",
+      },
+      {
+        title: "„Telefon po latach”",
+        paragraphs: [
+          "Kiedy zadzwonił po długiej przerwie, nie chciałam rozmowy — chciałam dowodu, że mnie pamięta. Ostatecznie dostałam tylko pogodę i pytanie, czy mam pracę.",
+          "Ta książka pomogła mi nazwać, że czasem „kontakt” też bywa nieobecnością.",
+        ],
+        name: "Bartek, 28",
+        role: "czytelnik",
+      },
+      {
+        title: "„Uczę się być innym ojcem”",
+        paragraphs: [
+          "Nie mam w domu wspomnień, do których chciałbym wracać. A jednak mam dziecko i codziennie próbuję budować coś od zera.",
+          "Czytając, poczułem ulgę: mogę kochać bez wielkich deklaracji — wystarczy, że zostaję i słucham.",
+        ],
+        name: "Tomasz, 39",
+        role: "ojciec",
+      },
+    ],
+  },
   whereToBuy: {
     title: "Gdzie kupić",
     intro: "Książka jest dostępna online i stacjonarnie. Wybierz księgarnię, którą lubisz najbardziej.",

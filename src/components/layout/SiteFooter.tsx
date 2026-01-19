@@ -12,6 +12,9 @@ export function SiteFooter() {
           <p className="muted">© {year} Wszystkie prawa zastrzeżone.</p>
         </div>
         <div className="footer-links">
+          <Link href={routes.articles} className="nav-link">
+            Artykuły
+          </Link>
           <Link href={routes.privacy} className="nav-link">
             Polityka prywatności
           </Link>

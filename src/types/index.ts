@@ -17,6 +17,13 @@ export type Testimonial = {
   role?: string;
 };
 
+export type ReaderStory = {
+  title: string;
+  paragraphs: string[];
+  name: string;
+  role?: string;
+};
+
 export type Copy = {
   hero: {
     eyebrow: string;
@@ -58,6 +65,11 @@ export type Copy = {
   testimonials: {
     title: string;
     list: Testimonial[];
+  };
+  readerStories: {
+    title: string;
+    intro: string;
+    list: ReaderStory[];
   };
   whereToBuy: {
     title: string;

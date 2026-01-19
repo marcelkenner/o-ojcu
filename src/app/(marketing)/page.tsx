@@ -8,6 +8,7 @@ import Excerpt from "./_sections/Excerpt";
 import Contents from "./_sections/Contents";
 import Author from "./_sections/Author";
 import Testimonials from "./_sections/Testimonials";
+import ReaderStories from "./_sections/ReaderStories";
 import WhereToBuy from "./_sections/WhereToBuy";
 import FAQ from "./_sections/FAQ";
 import type { FaqItem, Retailer } from "@/types";
@@ -24,6 +25,7 @@ export default function MarketingPage() {
       <Contents copy={copy.contents} />
       <Author copy={copy.author} />
       <Testimonials copy={copy.testimonials} />
+      <ReaderStories copy={copy.readerStories} />
       <WhereToBuy copy={copy.whereToBuy} retailers={retailers as Retailer[]} />
       <FAQ title={copy.faq.title} items={faq as FaqItem[]} />
     </>
