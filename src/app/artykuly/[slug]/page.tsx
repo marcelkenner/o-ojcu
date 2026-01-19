@@ -5,7 +5,6 @@ import { withMetadata } from "@/lib/metadata";
 import { routes } from "@/lib/routes";
 import SectionShell from "@/components/layout/SectionShell";
 import Container from "@/components/layout/Container";
-import Card from "@/components/ui/Card";
 import MarkdownReader from "@/components/ui/MarkdownReader";
 import ArticleCatalog from "@/lib/articles/ArticleCatalog";
 import ArticleMarkdownRepository from "@/lib/articles/ArticleMarkdownRepository";
@@ -52,9 +51,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           </Link>
         </div>
 
-        <Card variant="paper" className="reading-card">
-          <MarkdownReader markdown={markdown} />
-        </Card>
+        <MarkdownReader markdown={markdown} className="markdown--full" />
 
         <BuyBookCta retailers={retailers as Retailer[]} />
       </Container>

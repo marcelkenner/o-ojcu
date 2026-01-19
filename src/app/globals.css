@@ -131,6 +131,7 @@ section:not(:first-of-type) .section__title{font-size:clamp(1.75rem,4vw,2.5rem);
 .buy-cta__actions{display:flex;gap:var(--space-3);flex-wrap:wrap;align-items:center;margin-top:var(--space-4);} 
 .markdown{display:grid;gap:var(--space-4);line-height:1.75;font-size:1rem;} 
 .markdown--reading{gap:var(--space-5);max-width:76ch;margin:0 auto;line-height:1.9;font-size:clamp(1rem,1vw + .85rem,1.1rem);color:var(--ink-0);} 
+.markdown--reading.markdown--full{max-width:none;margin:0;} 
 .markdown--reading .md-h{font-family:var(--font-serif,"Playfair Display",serif);line-height:1.2;margin:0;scroll-margin-top:calc(var(--header-h-mobile)+var(--space-6));} 
 .markdown--reading .md-h1{font-size:clamp(1.9rem,3vw,2.4rem);} 
 .markdown--reading .md-h2{font-size:clamp(1.5rem,2.2vw,1.9rem);} 

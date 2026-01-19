@@ -1,5 +1,6 @@
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { HeadingTextNormalizer } from "@/lib/reading/HeadingTextNormalizer";
 
 interface Props {
   markdown: string;
@@ -10,6 +11,8 @@ function isExternalHref(href: string | undefined): boolean {
   if (!href) return false;
   return href.startsWith("http://") || href.startsWith("https://");
 }
+
+const headingTextNormalizer = new HeadingTextNormalizer();
 
 export default function MarkdownReader({ markdown, className }: Props) {
   return (
@@ -27,17 +30,17 @@ export default function MarkdownReader({ markdown, className }: Props) {
           },
           h1({ children }) {
             return (
-              <h1 className="md-h md-h1">{children}</h1>
+              <h1 className="md-h md-h1">{headingTextNormalizer.normalize(children)}</h1>
             );
           },
           h2({ children }) {
             return (
-              <h2 className="md-h md-h2">{children}</h2>
+              <h2 className="md-h md-h2">{headingTextNormalizer.normalize(children)}</h2>
             );
           },
           h3({ children }) {
             return (
-              <h3 className="md-h md-h3">{children}</h3>
+              <h3 className="md-h md-h3">{headingTextNormalizer.normalize(children)}</h3>
             );
           },
           p({ children }) {
